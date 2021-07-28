@@ -1,0 +1,328 @@
+
+package city;
+import java.io.*;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.util.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+class Cit {
+    String name;
+    int minmo,maxmo;
+    int mintu,maxtu;
+    int minwe,maxwe;
+    int mintur,maxtur;
+    int minfr,maxfr;
+    int minsat,maxsat;
+    int minsu,maxsu;
+    Cit(String name,int minmo,int maxmo,int mintu,int maxtu,int minwe,
+                   int maxwe,int mintur,int maxtur,int minfr,int maxfr,
+            int minsat,int maxsat,int minsu,int maxsu){
+        this.name=name;
+        this.minmo=minmo;
+        this.maxmo=maxmo;
+        this.mintu=mintu;
+        this.maxtu=maxtu;
+        this.minwe=minwe;
+        this.maxwe=maxwe;
+        this.mintur=mintur;
+        this.maxtur=maxtur;
+        this.minfr=minfr;
+        this.maxfr=maxfr;
+        this.minsat=minsat;
+        this.maxsat=maxsat;
+        this.minsu=minsu;
+        this.maxsu=maxsu;
+       }}
+
+
+////////////////////////////////
+///////////////
+public class City {
+public static void main(String[] args) {
+              int summin=0,summax=0;
+              Map minmap=new HashMap();
+              Map maxmap=new HashMap();
+              ArrayList<Integer> minarray=new ArrayList();
+              ArrayList<Integer>maxarray=new ArrayList();
+        ArrayList<temp> a1=new ArrayList<temp>();  
+        for(int i=1;i<5;i++){
+            try{
+                FileWriter myfile=new FileWriter("E:\\data5.txt",true);
+                BufferedWriter b=new BufferedWriter(myfile);
+                b.write("city           monday          tusday         wensday         thursday         friday         saturday        sunday\n");
+                b.write("--------------------------------------------------------------------------------------------------------------------\n");
+                b.write("            min    max      min     max       min   max       min     max     min    max     min    max       min   max\n");
+                b.write("-----------------------------------------------------------------------------------------------------------------------\n");
+            Scanner sc=new Scanner(System.in);
+            System.out.println("please enter the name of the " + i+"th  city :");
+            String n= sc.nextLine();
+            List <Integer>data1=new ArrayList();
+            int[] ran1=new int[10];
+            for(int j=0;j<ran1.length;j++){
+            ran1[j]=(int)(Math.random()*100);
+            data1.add((int)(Math.random()*1000));}
+            System.out.println("All the temprature of this city for monday is :" + data1);
+            Integer minmo = Collections.min(data1); 
+            System.out.println("the minimum temprature of this city for monday is :" + minmo);
+            Integer maxmo = Collections.max(data1);
+            System.out.println("the maximum temprature of this city for monday is :" + maxmo);
+            ///////////////////////////////////////////////////adama
+            List <Integer>data2=new ArrayList();
+            int[] ran2=new int[10];
+            for(int j=0;j<ran2.length;j++){
+            ran2[j]=(int)(Math.random()*100);
+            data2.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for tusday is :" + data2);
+            Integer mintu = Collections.min(data2); 
+            System.out.println("the minimum temprature of this city for tusday is :" + mintu);
+            Integer maxtu = Collections.max(data2);
+            System.out.println("the maximum temprature of this city for tusday is :" + maxtu);        
+ ////////////////////////////
+           List <Integer>data3=new ArrayList();
+            int[] ran3=new int[10];
+            for(int j=0;j<ran3.length;j++){
+            ran3[j]=(int)(Math.random()*100);
+            data3.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for wensday is :" + data3);
+            Integer minwe = Collections.min(data3); 
+            System.out.println("the minimum temprature of this city for wensday is :" + minwe);
+            Integer maxwe = Collections.max(data3);
+            System.out.println("the maximum temprature of this city for wensday is :" + maxwe); 
+   ///////////////////////////////////////////////////////
+           List <Integer>data4=new ArrayList();
+            int[] ran4=new int[10];
+            for(int j=0;j<ran4.length;j++){
+            ran4[j]=(int)(Math.random()*100);
+            data4.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for thursday is :" + data4);
+            Integer mintur = Collections.min(data4); 
+            System.out.println("the minimum temprature of this city for thursday is :" + mintur);
+            Integer maxtur = Collections.max(data4);
+            System.out.println("the maximum temprature of this city for thursday is :" + maxtur); 
+///////////////////////////////////////////////
+           List <Integer>data5=new ArrayList();
+            int[] ran5=new int[10];
+            for(int j=0;j<ran5.length;j++){
+            ran5[j]=(int)(Math.random()*100);
+            data5.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for friday is :" + data5);
+            Integer minfr = Collections.min(data5); 
+            System.out.println("the minimum temprature of this city for friday is :" + minfr);
+            Integer maxfr = Collections.max(data5);
+            System.out.println("the maximum temprature of this city for friday  is :" + maxfr); 
+///////////////////////////////////////////////////////
+            List <Integer>data6=new ArrayList();
+            int[] ran6=new int[10];
+            for(int j=0;j<ran6.length;j++){
+            ran6[j]=(int)(Math.random()*100);
+            data6.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for saturday is :" + data6);
+            Integer minsat = Collections.min(data6); 
+            System.out.println("the minimum temprature of this city for saturday is :" + minsat);
+            Integer maxsat = Collections.max(data6);
+            System.out.println("the maximum temprature of this city for saturday is :" + maxsat); 
+            ///////////////////////////////////////////////////////
+            List <Integer>data7=new ArrayList();
+            int[] ran7=new int[10];
+            for(int j=0;j<ran7.length;j++){
+            ran7[j]=(int)(Math.random()*100);
+            data7.add((int)(Math.random()*100));}
+            System.out.println("All the temprature of this city for sunday is :" + data7);
+            Integer minsu = Collections.min(data7); 
+            System.out.println("the minimum temprature of this city for sunday is :" + minsu);
+            Integer maxsu = Collections.max(data7);
+            System.out.println("the maximum temprature of this city for sunday is :" + maxsu); 
+////////////////////////////////////////////////////////////////
+            summin=minsu+minsat+minfr+mintur+minwe+mintu+minmo;
+            summax=maxsu+maxsat+maxfr+maxtur+maxwe+maxtu+maxmo;
+            minarray.add(summin);
+            maxarray.add(summax);
+            minmap.put(summin,n);
+            maxmap.put(summax,n);
+            b.write(n+"     "+minmo+"     "+maxmo+"      "+mintu+"    "+maxtu+"      "+minwe+"          "+maxwe+"      "+
+                    mintur+"   "+maxtur+"      "+minfr+"    "+maxfr+"      "+minsat+"    "+maxsat+"      "+minsu+""+maxsu+"\n\n\n");
+            temp s1=new temp(n,minmo,maxmo,mintu,maxtu,minwe,maxwe,mintur,maxtur,minfr,maxfr,minsat,maxsat,minsu,maxsu);
+            a1.add(s1);
+            System.out.println();
+            b.close();
+            myfile.close();}catch(IOException e){
+                                  System.out.println("error occur");
+                                  e.printStackTrace();}
+            /////////////////////////////////
+           }
+      Scanner sc=new Scanner(System.in);
+      System.out.println();
+      System.out.println(1 + ": " + " for monday");
+      System.out.println(2 + ": " + " for tusday");
+      System.out.println(3 + ": " + " for wensday");
+      System.out.println(4 + ": " + " for thursday");
+      System.out.println(5 + ": " + " for friday");
+      System.out.println(6 + ": " + " for saturday");
+      System.out.println(7 + ": " + " for sunday");
+      System.out.println(8 + ": " + " for weekly");
+      System.out.println(9 + ": " + " for exit");
+      while(1==1){
+          System.out.println();
+      System.out.println("please enter your preference :");
+      int preference= sc.nextInt();
+      if(preference==9){
+          break;}
+      switch(preference){
+          case 1:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.minmo);
+                a4.put(st.minmo,st.name);
+                a3.add(st.maxmo);
+                a5.put(st.maxmo,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in monday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in monday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for monday is :" + average);
+              break;}
+      ////////////////////////////////////////////////////////////////////
+      case 2:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.mintu);
+                a4.put(st.mintu,st.name);
+                a3.add(st.maxtu);
+                a5.put(st.maxtu,st.name);}           
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in tusday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in tusday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for tusday is :" + average);
+          break;}
+//////////////////////////////////////////////////////////////////
+          case 3:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.minwe);
+                a4.put(st.minwe,st.name);
+                a3.add(st.maxwe);
+                a5.put(st.maxwe,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in wensday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in wensday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for wensday is :" + average);
+          break;}
+ ////////////////////////////////////////////////////////////////////////
+          case 4:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.mintur);
+                a4.put(st.mintur,st.name);
+                a3.add(st.maxtur);
+                a5.put(st.maxtur,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in thursday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in thursday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for thursday is :" + average);
+           break;}        
+ /////////////////////////////////////////////////////////////////////////
+          case 5:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.minfr);
+                a4.put(st.minfr,st.name);
+                a3.add(st.maxfr);
+                a5.put(st.maxfr,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in friday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in friday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for friday is :" + average);
+          break;}
+/////////////////////////////////////////////////////////////////////
+          case 6:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.minsat);
+                a4.put(st.minsat,st.name);
+                a3.add(st.maxsat);
+                a5.put(st.maxsat,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in saturday is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in saturday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for saturday is :" + average);
+          break;}
+///////////////////////////////////////////////////////////////////
+          case 7:{
+              ArrayList<Integer> a2=new ArrayList();
+              ArrayList<Integer>a3=new ArrayList();
+              Map a4=new HashMap();
+              Map a5=new HashMap();
+              Iterator itr=a1.iterator();
+              while(itr.hasNext()){
+                  temp st=(temp)itr.next();
+                  a2.add(st.minsu);
+                a4.put(st.minsu,st.name);
+                a3.add(st.maxsu);
+                a5.put(st.maxsu,st.name);}
+          Integer min = Collections.min(a2);  
+          System.out.println("the colest city in sunday is is : " + a4.get(min));
+          Integer max = Collections.max(a3);
+          System.out.println("the hotest city in sunday is : " + a5.get(max));
+          float average=(max+min)/2;
+          System.out.println("the avarage temprature for sunday is :" + average);
+           break;}
+////////////////////////////////////////////////////////////////////
+          case 8:{
+          Integer weekmin=Collections.min(minarray);
+          Integer weekmax=Collections.min(maxarray);
+           System.out.println("the colest city in weekly is : " + minmap.get(weekmin));
+           System.out.println("the hotest city in weekly is : " + maxmap.get(weekmax));
+           break;}
+          default:{
+              System.out.println("please correct your preference or your preference is invalid ");
+              break;}}}}}
